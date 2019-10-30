@@ -190,6 +190,14 @@ void mouseDragged()
       }
 }
 
+void keyPressed()
+{
+  if (key == 'a' || key == 'A') {
+    screenZ = constrain(screenZ+inchToPix(.02f), .01, inchToPix(4f));
+  } else if (key == 'd' || key == 'D') {
+    screenZ = constrain(screenZ-inchToPix(.02f), .01, inchToPix(4f));
+  }
+}
 
 //probably shouldn't modify this, but email me if you want to for some good reason.
 public boolean checkForSuccess()
